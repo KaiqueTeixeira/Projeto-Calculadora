@@ -1,20 +1,40 @@
-function insert(num) {
-    let numero = document.getElementById("resultado").innerHTML
-    document.getElementById("resultado").innerHTML = numero + num 
-}
+let resultado = document.getElementById("resultado")
+let currentInput = ""
+let currentOperator = ""
 
-function calcular() {
-    let resultado = document.getElementById("resultado").innerHTML
-    if (resultado) {
-        document.getElementById("resultado").innerHTML = eval(resultado)
+function insert(data) {
+    if (currentInput.length < 15){
+        currentInput += data
+        resultado.innerHTML = currentInput
+    } else {
+        currentInput += ""
+        resultado.innerHTML = currentInput
     }
 }
 
-function limpar() {
-    document.getElementById("resultado").innerHTML = ""
+function insertOperator(operator) {
+    if (currentInput === "" || operator == ".") return
+    currentInput += operator
+    resultado.innerHTML = currentInput
 }
 
+/* Botão de Calcular "=" */
+function calcular() {
+    try{
+        resultado.innerHTML = math.evaluate(resultado.innerHTML)
+    } catch {
+        resultado.innerHTML = "Error"
+    }
+}
+
+/* Botão de Apagar "C" */
+function limpar() {
+    currentInput = ""
+    resultado.innerHTML = currentInput
+}
+
+/* Botão de Apagar "<" */
 function apagar() {
-    let resultado = document.getElementById("resultado").innerHTML
-    document.getElementById("resultado").innerHTML = resultado.substring(0, resultado.length -1)
+    currentInput = currentInput.slice(0, -1)
+    resultado.innerHTML = currentInput
 }
