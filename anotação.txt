@@ -1,0 +1,23 @@
+function insert(num) {
+    let numero = document.getElementById("resultado").innerHTML
+    document.getElementById("resultado").innerHTML = numero + num
+}
+
+Código está pegando o conteúdo atual da tela da calculadora.
+Usa document.getElementById("resultado") para acessar um elemento HTML com o id="resultado" (geralmente um <div> ou <span> que exibe o que está sendo digitado).
+.innerHTML pega o conteúdo de texto que está dentro desse elemento.
+O conteúdo é armazenado na variável numero.
+
+document.getElementById("resultado").innerHTML = numero + num
+
+Essa linha atualiza a tela da calculadora com o novo valor:
+Pega o conteúdo atual (numero) e concatena com o novo caractere digitado (num).
+Depois, coloca esse novo valor de volta no elemento com id resultado.
+
+document.getElementById("resultado").innerHTML = eval(resultado)
+
+A função eval(resultado) avalia a expressão matemática contida em resultado.
+Por exemplo:
+Se resultado for "2+2", eval("2+2") retorna 4.
+Se for "10/2", retorna 5.
+O resultado calculado é então exibido na tela (substitui o que estava no innerHTML do elemento com id resultado).
