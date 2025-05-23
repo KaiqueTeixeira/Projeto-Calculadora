@@ -22,9 +22,6 @@ function insert(data) {
 function insertOperator(operator) {
     if (currentInput === "") return
 
-    const sinal = currentInput.slice(-1)
-    if ("-+*/".includes(sinal)) return
-
     currentInput += operator
     resultado.innerHTML = currentInput
 }
