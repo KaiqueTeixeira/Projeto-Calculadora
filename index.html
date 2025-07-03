@@ -21,38 +21,34 @@
             </p>
         </div>
 
-        <table>
-            <tr>
-                <td><button onclick="limpar()">C</button></td>
-                <td><button onclick="apagar()"><</button></td>
-                <td><button onclick="insertOperator('%')">%</button></td>
-                <td><button onclick="insertOperator('/')">÷</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="insert('7')">7</button></td>
-                <td><button onclick="insert('8')">8</button></td>
-                <td><button onclick="insert('9')">9</button></td>
-                <td><button onclick="insertOperator('*')">×</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="insert('4')">4</button></td>
-                <td><button onclick="insert('5')">5</button></td>
-                <td><button onclick="insert('6')">6</button></td>
-                <td><button onclick="insertOperator('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="insert('1')">1</button></td>
-                <td><button onclick="insert('2')">2</button></td>
-                <td><button onclick="insert('3')">3</button></td>
-                <td><button onclick="insertOperator('+')">+</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="insert('00')">00</button></td>
-                <td><button onclick="insert('0')">0</button></td>
-                <td><button onclick="insertOperator('.')">.</button></td>
-                <td><button onclick="calcular()">=</button></td>
-            </tr>
-        </table>
+        <div class="conteiner">
+            
+            <button onclick="limpar()">C</button>
+            <button onclick="apagar()"><</button>
+            <button onclick="insertOperator('%')">%</button>
+            <button onclick="insertOperator('/')">÷</button>
+
+            <button onclick="insert('7')">7</button>
+            <button onclick="insert('8')">8</button>
+            <button onclick="insert('9')">9</button>
+            <button onclick="insertOperator('*')">×</button>
+            
+            <button onclick="insert('4')">4</button>
+            <button onclick="insert('5')">5</button>
+            <button onclick="insert('6')">6</button>
+            <button onclick="insertOperator('-')">-</button>
+
+            <button onclick="insert('1')">1</button>
+            <button onclick="insert('2')">2</button>
+            <button onclick="insert('3')">3</button>
+            <button onclick="insertOperator('+')">+</button>
+
+            <button onclick="insert('00')">00</button>
+            <button onclick="insert('0')">0</button>
+            <button onclick="insertOperator('.')">.</button>
+            <button onclick="calcular()">=</button>
+        </div>
+
     </main>
     
     <script src="https://cdn.jsdelivr.net/npm/mathjs/lib/browser/math.js"></script>

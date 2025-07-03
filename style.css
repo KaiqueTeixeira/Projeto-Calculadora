@@ -29,10 +29,7 @@ body{
     background-color: #422D6B;
     padding: 20px;
     border-radius: 10px;
-
-    
 }
-
 
 /* HEADER */
 header {
@@ -64,13 +61,15 @@ header {
 }
 
 /* TABELA */
-table {
-    margin: auto;
-}
-button {
-    height: 85px;
-    width: 85px;
+.conteiner {
+    display: grid;
 
+    grid-template-columns: 85px 85px 85px 85px;
+    grid-template-rows: 85px 85px 85px 85px 85px ;
+    gap: 5px;
+}
+
+button {
     font-size: 25px;
     font-weight: bolder;
     text-align: center;
@@ -79,9 +78,6 @@ button {
 
     border: none;
     border-radius: 8px;
-
-    padding: 25px;
-    margin: 2px;
 }
 
 button:hover {
